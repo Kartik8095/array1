@@ -33,9 +33,14 @@ def read_scores():
     return parse_scores_from_string(raw)
 
 def main():
-print("==main/master branch output==")
-print(f"court of scores:{leen(scores)}")
-print(f"sum:{total}")
-print(f"Average:{avg}")
-if__name__=="__main__":
-main()
+    scores = read_scores()
+    total = sum(scores) if scores else 0
+    avg = total / len(scores) if scores else 0
+
+    print("==main/master branch output==")
+    print(f"count of scores: {len(scores)}")
+    print(f"sum: {total}")
+    print(f"Average: {avg}")
+
+if __name__ == "__main__":
+    main()
